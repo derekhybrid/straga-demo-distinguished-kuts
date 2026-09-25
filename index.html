@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Distinguished Kuts Barber Shop | Wilmington, NC</title>
+<meta name="description" content="Distinguished Kuts Barber Shop — precision cuts, classic shaves, Wilmington, NC.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#f4ead9;
+    --bg:#111010;
+    --bg2:#1a1816;
+    --cream:#f4ead9;
+    --red:#7a2b28;
+    --line:#312c26;
+    --muted:#a89c8a;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Inter',Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px;}
+  .script{font-family:'Pinyon Script',cursive;}
+
+  header{
+    padding:18px 0;
+    border-bottom:1px solid var(--line);
+    position:sticky;top:0;
+    background:rgba(17,16,16,0.94);
+    backdrop-filter:blur(6px);
+    z-index:10;
+  }
+  header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;}
+  .brand{display:flex;align-items:center;gap:12px;}
+  .brand .mark{width:40px;height:40px;flex-shrink:0;}
+  .brand-text{
+    font-family:'Pinyon Script',cursive;
+    font-size:1.7rem;
+    line-height:1;
+    color:var(--cream);
+  }
+  nav a{
+    margin-left:28px;
+    text-decoration:none;
+    color:var(--muted);
+    font-size:0.82rem;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+  }
+  nav a:hover{color:var(--cream);}
+  .call-pill{
+    border:1px solid var(--cream);
+    color:var(--cream)!important;
+    padding:8px 16px;
+    border-radius:100px;
+    font-size:0.9rem;
+    white-space:nowrap;
+  }
+
+  .hero{
+    padding:70px 0 60px;
+    background:
+      radial-gradient(circle at 20% 10%, rgba(244,234,217,0.06), transparent 45%),
+      var(--bg);
+    border-bottom:1px solid var(--line);
+    text-align:center;
+  }
+  .hero .mark-big{width:130px;height:130px;margin:0 auto 22px;}
+  .hero .script-lockup{font-size:clamp(2.6rem,8vw,4.2rem);line-height:1;color:var(--cream);}
+  .hero .script-lockup small{display:block;font-size:0.5em;margin-top:6px;}
+  .eyebrow{
+    color:var(--muted);
+    text-transform:uppercase;
+    letter-spacing:0.22em;
+    font-size:0.74rem;
+    margin:20px 0 18px;
+  }
+  .lede{
+    color:var(--muted);
+    font-size:1.1rem;
+    max-width:46ch;
+    line-height:1.6;
+    margin:0 auto 34px;
+  }
+  .cta-row{display:flex;gap:16px;flex-wrap:wrap;justify-content:center;}
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;
+    padding:15px 26px;
+    border-radius:4px;
+    font-weight:700;
+    text-decoration:none;
+    letter-spacing:0.03em;
+    font-size:0.95rem;
+  }
+  .btn-primary{background:var(--cream);color:#211a10;}
+  .btn-ghost{border:1px solid var(--line);color:var(--ink);}
+  .btn-primary:hover{background:#e2d3ae;}
+  .btn-ghost:hover{border-color:var(--cream);color:var(--cream);}
+
+  .stats{
+    display:grid;grid-template-columns:repeat(3,1fr);
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    background:var(--bg2);
+  }
+  .stat{padding:26px 24px;text-align:center;border-right:1px solid var(--line);}
+  .stat:last-child{border-right:none;}
+  .stat b{display:block;font-family:'Pinyon Script',cursive;font-size:2.1rem;color:var(--cream);font-weight:400;}
+  .stat span{color:var(--muted);font-size:0.78rem;text-transform:uppercase;letter-spacing:0.08em;}
+
+  section{padding:76px 0;}
+  .section-head{max-width:52ch;margin:0 0 44px;}
+  .section-head .eyebrow{margin:0 0 12px;text-align:left;}
+  .section-head h2{font-family:'Pinyon Script',cursive;font-weight:400;font-size:2.6rem;margin:0 0 14px;}
+  .section-head p{color:var(--muted);line-height:1.6;}
+
+  .services{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:1px;background:var(--line);border:1px solid var(--line);
+  }
+  .service{background:var(--bg);padding:30px 26px;}
+  .service .tag{color:var(--muted);font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;}
+  .service h3{font-family:'Inter',sans-serif;font-weight:700;font-size:1.05rem;margin:10px 0 8px;}
+  .service p{color:var(--muted);font-size:0.9rem;line-height:1.55;margin:0 0 14px;}
+  .service .price{color:var(--cream);font-weight:700;font-size:0.85rem;}
+
+  .story{
+    background:var(--bg2);
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  }
+  .story .grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:56px;align-items:center;}
+  .story blockquote{
+    font-family:'Pinyon Script',cursive;font-weight:400;
+    font-size:2rem;line-height:1.35;
+    margin:0 0 20px;color:var(--cream);
+  }
+  .story cite{color:var(--muted);font-style:normal;font-size:0.85rem;letter-spacing:0.05em;}
+  .card-visual{
+    aspect-ratio:4/3;border-radius:6px;
+    background:#17140f;
+    border:1px solid var(--line);
+    display:flex;align-items:center;justify-content:center;
+  }
+  .card-visual svg{width:46%;}
+
+  .hours-loc{display:grid;grid-template-columns:1fr 1fr;gap:56px;}
+  .info-block h3{
+    font-size:0.76rem;text-transform:uppercase;letter-spacing:0.12em;color:var(--muted);
+    margin:0 0 16px;font-weight:600;
+  }
+  .info-block ul{list-style:none;margin:0;padding:0;}
+  .info-block li{
+    display:flex;justify-content:space-between;
+    padding:10px 0;border-bottom:1px solid var(--line);
+    color:var(--muted);font-size:0.95rem;
+  }
+  .info-block li span:last-child{color:var(--ink);}
+
+  footer{
+    border-top:1px solid var(--line);
+    padding:36px 0;
+    color:var(--muted);font-size:0.83rem;
+  }
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;align-items:center;}
+  .demo-note{
+    background:var(--cream);color:#211a10;text-align:center;
+    padding:10px 16px;font-size:0.85rem;font-weight:600;
+  }
+  @media (max-width:760px){
+    .story .grid, .hours-loc{grid-template-columns:1fr;}
+    nav{display:none;}
+    .stats{grid-template-columns:1fr;}
+    .stat{border-right:none;border-bottom:1px solid var(--line);}
+  }
+</style>
+</head>
+<body>
+
+<div class="demo-note">This is a free concept site built for Distinguished Kuts by Straga Hybrid Marketing — styled after their own shop sign — not yet live.</div>
+
+<header>
+  <div class="wrap">
+    <div class="brand">
+      <svg class="mark" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M20 62c0-18 13-34 30-34s30 16 30 34" stroke="#f4ead9" stroke-width="3" stroke-linecap="round"/>
+        <path d="M14 60c8-3 16-4 36-4s28 1 36 4" stroke="#f4ead9" stroke-width="3" stroke-linecap="round"/>
+        <path d="M25 52c0 12 6 26 25 26s25-14 25-26" stroke="#f4ead9" stroke-width="3" stroke-linecap="round"/>
+        <ellipse cx="41" cy="52" rx="7" ry="5" stroke="#f4ead9" stroke-width="3"/>
+        <ellipse cx="59" cy="52" rx="7" ry="5" stroke="#f4ead9" stroke-width="3"/>
+        <path d="M48 52h4" stroke="#f4ead9" stroke-width="3"/>
+        <path d="M27 68c4 8 12 13 23 13s19-5 23-13" stroke="#f4ead9" stroke-width="3" stroke-linecap="round"/>
+      </svg>
+      <span class="brand-text">Distinguished Kuts</span>
+    </div>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#shop">The Shop</a>
+      <a href="#visit">Visit</a>
+    </nav>
+    <a class="call-pill" href="tel:+19105478426">(910) 547-8426</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <svg class="mark-big" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M20 62c0-18 13-34 30-34s30 16 30 34" stroke="#f4ead9" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M14 60c8-3 16-4 36-4s28 1 36 4" stroke="#f4ead9" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M25 52c0 12 6 26 25 26s25-14 25-26" stroke="#f4ead9" stroke-width="2.5" stroke-linecap="round"/>
+      <ellipse cx="41" cy="52" rx="7" ry="5" stroke="#f4ead9" stroke-width="2.5"/>
+      <ellipse cx="59" cy="52" rx="7" ry="5" stroke="#f4ead9" stroke-width="2.5"/>
+      <path d="M48 52h4" stroke="#f4ead9" stroke-width="2.5"/>
+      <path d="M27 68c4 8 12 13 23 13s19-5 23-13" stroke="#f4ead9" stroke-width="2.5" stroke-linecap="round"/>
+    </svg>
+    <div class="script-lockup">Distinguished<small>Kuts</small></div>
+    <p class="eyebrow">Princess Place Drive &middot; Wilmington, NC</p>
+    <p class="lede">Precision fades, clean lineups, and classic shaves — the kind of barbershop where regulars have a standing appointment and walk-ins still get treated right.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="tel:+19105478426">Call to Book &nbsp;→</a>
+      <a class="btn btn-ghost" href="#services">See services</a>
+    </div>
+  </div>
+</section>
+
+<div class="stats">
+  <div class="stat"><b>Walk-ins</b><span>Welcome Daily</span></div>
+  <div class="stat"><b>Fades &amp; Lineups</b><span>House Specialty</span></div>
+  <div class="stat"><b>Princess Pl.</b><span>Wilmington, NC</span></div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">What we do</p>
+      <h2>Every cut, done right.</h2>
+      <p>No rushed chairs. Every service starts with a real conversation about what you want, then a clean, consistent finish every time you sit down.</p>
+    </div>
+    <div class="services">
+      <div class="service">
+        <span class="tag">Signature</span>
+        <h3>Precision Fade</h3>
+        <p>Skin, taper, or blowout fade — blended clean and finished with a lineup.</p>
+        <span class="price">Ask in shop</span>
+      </div>
+      <div class="service">
+        <span class="tag">Classic</span>
+        <h3>Cut &amp; Line-Up</h3>
+        <p>Your regular cut, sharpened up with a crisp edge-up and neckline.</p>
+        <span class="price">Ask in shop</span>
+      </div>
+      <div class="service">
+        <span class="tag">Grooming</span>
+        <h3>Beard Trim &amp; Shape</h3>
+        <p>Line, shape, and clean up — paired with any cut or on its own.</p>
+        <span class="price">Ask in shop</span>
+      </div>
+      <div class="service">
+        <span class="tag">Fresh</span>
+        <h3>Kids' Cuts</h3>
+        <p>Patient chairs for the little ones, same sharp standard.</p>
+        <span class="price">Ask in shop</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="story" id="shop">
+  <div class="wrap grid">
+    <div>
+      <p class="eyebrow">The shop</p>
+      <blockquote>"People don't just come in for a haircut. They come in because they know exactly what they're going to get."</blockquote>
+      <cite>— Distinguished Kuts, Wilmington</cite>
+    </div>
+    <div class="card-visual">
+      <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M20 62c0-18 13-34 30-34s30 16 30 34" stroke="#f4ead9" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M14 60c8-3 16-4 36-4s28 1 36 4" stroke="#f4ead9" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M25 52c0 12 6 26 25 26s25-14 25-26" stroke="#f4ead9" stroke-width="2.5" stroke-linecap="round"/>
+        <ellipse cx="41" cy="52" rx="7" ry="5" stroke="#f4ead9" stroke-width="2.5"/>
+        <ellipse cx="59" cy="52" rx="7" ry="5" stroke="#f4ead9" stroke-width="2.5"/>
+        <path d="M48 52h4" stroke="#f4ead9" stroke-width="2.5"/>
+        <path d="M27 68c4 8 12 13 23 13s19-5 23-13" stroke="#f4ead9" stroke-width="2.5" stroke-linecap="round"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section id="visit">
+  <div class="wrap hours-loc">
+    <div class="info-block">
+      <h3>Hours</h3>
+      <ul>
+        <li><span>Tuesday – Friday</span><span>9:00 – 6:00</span></li>
+        <li><span>Saturday</span><span>8:00 – 4:00</span></li>
+        <li><span>Sunday – Monday</span><span>Closed</span></li>
+      </ul>
+    </div>
+    <div class="info-block">
+      <h3>Find Us</h3>
+      <ul>
+        <li><span>Address</span><span>2014 Princess Place Dr, Wilmington, NC</span></li>
+        <li><span>Phone</span><span>(910) 547-8426</span></li>
+        <li><span>Parking</span><span>Free lot on site</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>&copy; Distinguished Kuts Barber Shop &middot; Wilmington, NC</div>
+    <div>Concept site by Straga Hybrid Marketing</div>
+  </div>
+</footer>
+
+</body>
+</html>
